@@ -125,8 +125,11 @@ p {
 
 .row {
     margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .course-col {
@@ -137,7 +140,7 @@ p {
     padding: 16px 12px;
     box-sizing: border-box;
     transition: 0.5s;
-
+    height: 200px;
 }
 
 h3 {
@@ -151,15 +154,12 @@ h3 {
 }
 
 
-@media(max-width: 700px) {
+@media only screen and (max-width: 768px) {
     .row {
         flex-direction: column;
     }
 
 }
-
-
-/*-----campus--------*/
 
 .campus {
     width: 80%;
@@ -204,7 +204,7 @@ h3 {
     left: 50px;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .menu-toggle {
         display: flex;
     }
@@ -239,5 +239,16 @@ h3 {
 
     .text-box h1{
         font-size: 2em;
+    }
+
+    .course-col {
+        flex-basis: 31%;
+        background: #dcdae4;
+        border-radius: 5px;
+        margin-bottom: 5%;
+        padding: 16px 12px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        height: auto;
     }
 }
